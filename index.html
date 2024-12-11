@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>B2S Embedding bosh</title>
+  </head>
+
+  <body>
+    <h1>B2S bosh</h1>
+
+    <fieldset>
+      id ="first_row_of_buttons">
+      <legend>Filter the view</legend>
+      <input
+        type="button"
+        value="Oregon and Washington only"
+        id="oregon_and_washington"
+      />
+      <input type="button" value="Clear filter" id="clear_Filter" />
+      <input type="button" value="Undo" id="undo" />
+    </fieldset>
+
+    <div class="content">
+      <tableau-viz
+        id="tableauViz"
+        src="https://public.tableau.com/views/Superstore_embedded_800x800/Overview"
+        toolbar="bottom"
+        hide-tabs
+      >
+      </tableau-viz>
+    </div>
+    <script
+      type="module"
+      src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"
+    ></script>
+
+    <script src="app.js"></script>
+  </body>
+</html>
